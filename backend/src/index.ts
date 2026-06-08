@@ -13,6 +13,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
+app.set('trust proxy', 1);
 
 try {
   const swaggerDocument = YAML.load(path.join(__dirname, './docs/swagger.yaml'));
