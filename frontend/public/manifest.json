@@ -2,14 +2,14 @@
   "manifest_version": 3,
   "name": "Sprintxt AI",
   "version": "1.0",
-  "description": "Enhance professional writing using a secure local AI proxy.",
+  "description": "Enhance professional writing via a secure local AI proxy.",
   "permissions": [
-    "contextMenus",
     "activeTab",
-    "scripting"
+    "scripting",
+    "contextMenus"
   ],
   "host_permissions": [
-    "http://localhost:3000/*",
+    "http://127.0.0.1:3000/*",
     "<all_urls>"
   ],
   "background": {
@@ -19,7 +19,8 @@
     {
       "matches": ["<all_urls>"],
       "js": ["content.js"],
-      "css": ["popup.css"]
+      "css": ["popup.css"],
+      "all_frames": true 
     }
   ],
   "action": {
