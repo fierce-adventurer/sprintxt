@@ -31,5 +31,5 @@ app.get('/health', (req: Request, res: Response) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`🚀 ProWriter Backend Proxy running on port ${PORT}`);
+  console.log(`🚀 Sprintxt Backend Proxy running on port ${PORT}`);
 });
