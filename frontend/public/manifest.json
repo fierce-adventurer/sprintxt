@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "ProWriter AI",
+  "version": "1.0",
+  "description": "Enhance professional writing using a secure local AI proxy.",
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://localhost:3000/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["popup.css"]
+    }
+  ],
+  "action": {
+    "default_popup": "index.html"
+  }
+}
