@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import swaggerUi from 'swagger-ui-express';
 import YAML from 'yamljs';
 import path from 'path';
+import completionRouter from './routes/completion.routes';
 
 dotenv.config();
 
@@ -20,6 +21,9 @@ try {
 } catch (error) {
   console.error('⚠️ Failed to load Swagger documentation:', error);
 }
+
+// Mount API Route Modules
+app.use('/api/v1', completionRouter);
 
 app.get('/health', (req: Request, res: Response) => {
   res.status(200).json({ status: 'UP', timestamp: new Date() });

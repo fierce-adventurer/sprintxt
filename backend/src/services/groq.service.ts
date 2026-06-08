@@ -2,7 +2,7 @@ import { Groq } from 'groq-sdk';
 
 export class GroqService {
   private groq: Groq;
-  private defaultModel = 'llama3-8b-8192';
+  private defaultModel = 'Llama-3.1-8b-instant';
 
   constructor() {
     if (!process.env.GROQ_API_KEY) {
