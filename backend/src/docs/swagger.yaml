@@ -1,0 +1,49 @@
+openapi: 3.0.0
+info:
+  title: Sprintxt AI API Proxy
+  description: Secure backend proxy handling context text enhancements via Groq LLM.
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+    description: Local Development Server
+paths:
+  /api/v1/completion:
+    post:
+      summary: Process text completion or enhancement
+      operationId: processCompletion
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - action
+                - selectedText
+              properties:
+                action:
+                  type: string
+                  enum: [enhance, prompt]
+                selectedText:
+                  type: string
+                customPrompt:
+                  type: string
+      responses:
+        '200':
+          description: Successful text transformation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  data:
+                    type: object
+                    properties:
+                      originalText:
+                        type: string
+                      generatedText:
+                        type: string
+                      modelUsed:
+                        type: string
