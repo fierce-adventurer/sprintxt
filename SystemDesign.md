@@ -1,7 +1,7 @@
-# ProWriter AI: System Architecture & Design Document
+# Sprintxt AI: System Architecture & Design Document
 
 ## 1. Project Overview
-**ProWriter AI** is a browser extension designed for professional workers to seamlessly enhance and generate text within web-based text boxes (e.g., LinkedIn, Gmail, AI chatboxes). It operates via a native context menu (right-click) and interacts with a secure, self-hosted Node.js backend proxy that communicates with the Groq API.
+**Sprintxt AI** is a browser extension designed for professional workers to seamlessly enhance and generate text within web-based text boxes (e.g., LinkedIn, Gmail, AI chatboxes). It operates via a native context menu (right-click) and interacts with a secure, self-hosted Node.js backend proxy that communicates with the Groq API.
 
 ## 2. Technology Stack
 * **Frontend (Browser Extension):** HTML, CSS (TailwindCSS), TypeScript/JavaScript (Manifest V3)

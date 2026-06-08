@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "ProWriter AI",
+  "name": "Sprintxt AI",
   "version": "1.0",
   "description": "Enhance professional writing using a secure local AI proxy.",
   "permissions": [
